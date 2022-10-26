@@ -1,0 +1,9 @@
+.imagen{
+    width: 30% !important;
+}
+
+.borderB{
+  border-bottom: 1px solid grey;
+  width: 50%;
+  padding: 0px 0px 8px 3px;
+}
