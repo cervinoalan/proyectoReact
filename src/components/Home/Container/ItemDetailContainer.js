@@ -7,8 +7,15 @@ function ItemDetailContainer () {
  const {idProducto} = useParams();
  const [producto,setProducto] = useState({});
 
+ const getImages = () => {
+  setTimeout(() => {
+    setProducto(getProductoById(idProducto));
+  }, 2000);
+};
+
+
 useEffect(() => {
-  setProducto(getProductoById(idProducto));
+  getImages();
 },[]);
 
   return(
