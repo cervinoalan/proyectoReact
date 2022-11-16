@@ -11,7 +11,7 @@ function NavBarA(props) {
         <Navbar bg="dark" variant="dark">
         <Container>
           <Link to="./">
-          <Navbar.Brand className='me-5'>TecnoStore</Navbar.Brand>
+          <Navbar.Brand className='me-5'><img src="../images/logo.jpg" alt="logo" className='logo me-5'></img></Navbar.Brand>
           </Link>
           <Nav className="me-auto">
           <Link to="./categoria/monitores"><Nav className='navA'>Monitores</Nav></Link>

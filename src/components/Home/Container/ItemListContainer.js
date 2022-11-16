@@ -2,8 +2,7 @@ import ItemList from "./ItemList"
 
 function ItemListContainer() {
     return(
-        <div>
-            <br/><br/><br/><br/>
+        <div className="mt-5">
             <ItemList/>
         </div>
     )

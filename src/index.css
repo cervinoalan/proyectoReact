@@ -19,3 +19,11 @@ a{
 .colorNegro{
   color: black;
 }
+
+.colorBlanco{
+  color: #fff;
+}
+
+.fondoNegro{
+  background-color: black;
+}

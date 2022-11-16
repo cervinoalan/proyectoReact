@@ -1,30 +1,31 @@
 import { useState, useEffect } from "react";
 import Item from "./Item";
 import { useParams } from "react-router-dom";
-import productoApi from "./producto";
+import Loader from "./Spinner";
+import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore'
 
 function ItemList(){
 
-    const [cards, setCards] = useState([]);
+    const [cards, setCards] = useState(<Loader/>);
     const { cat } = useParams();
+    const [loading, isLoading] = useState(false)
 
-    const getImages = () => {
-        setTimeout(() => {
-          const items = productoApi;
-          setCards(items);
-        }, 1500);
-      };
+    useEffect(() => {
+    const db = getFirestore()
+    const docRef = cat ? query(collection(db, 'items'), where("categoria", "==", cat)) : collection(db, 'items'); 
     
-      useEffect(() => {
-        getImages();
-      }, []);
+    getDocs(docRef)
+      .then((snapshot) => {
+      setCards(snapshot.docs.map((doc)=> ({id:doc.id, ...doc.data()})));
+            isLoading(true);
+      })
+    }, [cat]);
     
 
       return ( 
           <div className="d-flex flex-wrap justify-content-around">
-        {cat
-          ? cards
-              .filter((producto) => producto.categoria === cat)
+        {!loading ? cards
+          : cat ? cards
               .map((producto) => (
                 <Item 
                 key={producto.id}
