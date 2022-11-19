@@ -16,6 +16,8 @@ function Formulario(cart, precioTotal) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
   function handleSubmit(e) {
     e.preventDefault();
     const date = new Date();
@@ -40,6 +42,7 @@ function Formulario(cart, precioTotal) {
           title: "¡Orden enviada!",
           text: `Su numero de orden es: ${id}`,
           confirmButtonText: "Entendido",
+          confirmButtonColor: "#777",
           showConfirmButton: true,
         }),
       clearCart(),
@@ -66,6 +69,7 @@ function Formulario(cart, precioTotal) {
                 type="text"
                 placeholder="Nombre Apellido"
                 autoFocus
+                required
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="mail">
@@ -74,6 +78,7 @@ function Formulario(cart, precioTotal) {
                 onChange={(e) => setMail(e.target.value)}
                 type="email"
                 placeholder="nombre@ejemplo.com"
+                required
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="mailConfirmacion">
@@ -82,6 +87,7 @@ function Formulario(cart, precioTotal) {
                 onChange={(e) => setMailConfirmacion(e.target.value)}
                 type="email"
                 placeholder="nombre@ejemplo.com"
+                required
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="telefono">
@@ -89,8 +95,8 @@ function Formulario(cart, precioTotal) {
               <Form.Control
                 onChange={(e) => setPhone(e.target.value)}
                 type="number"
-                max={8}
                 placeholder="00000000"
+                required
               />
             </Form.Group>
           </Form>
@@ -102,7 +108,15 @@ function Formulario(cart, precioTotal) {
           <Button
             variant="dark"
             onClick={handleSubmit}
-            disabled={mail != mailConfirmacion}
+            disabled={
+              mail !== mailConfirmacion ||
+              name === "" ||
+              mail === "" ||
+              phone === "" ||
+              mailConfirmacion === "" ||
+              !isNaN(name) ||
+              !mail.match(validRegex)
+            }
           >
             Confirmar Compra
           </Button>

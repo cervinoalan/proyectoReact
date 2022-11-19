@@ -10,6 +10,8 @@ import {
   where,
 } from "firebase/firestore";
 
+//Contenedor del Producto con su detalle
+
 function ItemDetailContainer() {
   const { nombre } = useParams();
   const [producto, setProducto] = useState(<Loader />);

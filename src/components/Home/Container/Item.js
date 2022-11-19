@@ -2,6 +2,8 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
+// Card de cada producto en el Contenedor principal
+
 function Item(props) {
   return (
     <Card style={{ width: "18rem" }} className="mb-5">

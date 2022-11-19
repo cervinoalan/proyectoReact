@@ -10,6 +10,8 @@ import {
   where,
 } from "firebase/firestore";
 
+//Renderizado del contenedor principal con filtrado por categorias
+
 function ItemList() {
   const [cards, setCards] = useState(<Loader />);
   const { cat } = useParams();

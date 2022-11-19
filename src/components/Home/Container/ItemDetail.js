@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import CartContext from "../../Context/CartContext";
 import { Button } from "react-bootstrap";
 
+//Renderizado del producto con su detalle + selector de cantidad
+
 function ItemDetail(props) {
   const [gotoCart, setGoToCart] = useState(false);
   const { addProduct } = useContext(CartContext);

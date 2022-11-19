@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 
+//Contador para seleccionar cantidad de productos con stock como maximo
+
 function ItemCount({ initial, stock, onAdd }) {
   const [valor, setValor] = useState(parseInt(initial));
 
+  //Suma +1 item
   function agregar() {
     setValor(valor + 1);
   }
-
+  //Resta -1 item
   function quitar() {
     setValor(valor - 1);
   }

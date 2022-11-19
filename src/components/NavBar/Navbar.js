@@ -5,6 +5,8 @@ import Cart from "./CartWidget";
 import { Link } from "react-router-dom";
 import "./nav.css";
 
+//Navbar con link a las respectivas rutas de cada categoria
+
 function NavBarA(props) {
   return (
     <div>

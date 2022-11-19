@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { initializeApp } from "firebase/app";
 
+//Se trae la configuracion de Firebase
+
 const firebaseConfig = {
   apiKey: "AIzaSyApclbgp9cb7V4J4Xw-wnsMU1XzmpXVSlM",
   authDomain: "tecno-store-666e9.firebaseapp.com",

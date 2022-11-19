@@ -7,6 +7,8 @@ import Footer from "../components/Footer/Footer";
 import Cart from "../components/Cart/Cart";
 import { CartProvider } from "../components/Context/CartContext";
 
+//Se hace el router de las paginas, se aplica el CartProvider en toda la pagina ya que es necesario en su totalidad
+
 function Router() {
   return (
     <CartProvider>
