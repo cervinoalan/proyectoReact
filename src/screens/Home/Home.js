@@ -1,9 +1,9 @@
-import ItemListContainer from '../../components/Home/Container/ItemListContainer';
+import ItemListContainer from "../../components/Home/Container/ItemListContainer";
 
 function Home() {
   return (
     <div>
-      <ItemListContainer/>
+      <ItemListContainer />
     </div>
   );
 }

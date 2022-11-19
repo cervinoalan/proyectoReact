@@ -1,8 +1,8 @@
-import Spinner from 'react-bootstrap/Spinner';
+import Spinner from "react-bootstrap/Spinner";
 
 function Loader() {
   return (
-    <Spinner animation="border" role="status" className='mb-5'>
+    <Spinner animation="border" role="status" className="mb-5">
       <span className="visually-hidden">Loading...</span>
     </Spinner>
   );

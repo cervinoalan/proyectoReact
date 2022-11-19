@@ -4,7 +4,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 
 function Footer (){
     return(
-        <footer className="fondoNegro colorBlanco d-flex justify-content-evenly align-bottom fixed-bottom">
+      <div>
+        <footer className="fondoNegro colorBlanco d-flex justify-content-evenly fixed-bottom">
       <div>
       <h6 className="my-4">INFORMACION UTIL</h6>
         <p className="small d-flex m-2 text-decoration-none colorBlanco">SOBRE NOSOTROS</p>
@@ -26,6 +27,7 @@ function Footer (){
           </div>
         </div>
     </footer>
+    </div>
     )
 }
 

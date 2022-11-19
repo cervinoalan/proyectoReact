@@ -1,32 +1,21 @@
-.imagen{
+.imagen {
     width: 175px;
 }
 
-.carrito{
+.carrito {
     width: 300px;
 }
 
-.estilo{
+.estilo {
     margin-left: 20;
     overflow: auto;
 }
 
-.trash{
+.trash {
     cursor: pointer;
 }
 
 .cartTotal {
-        background-color: #bcbcbc;
-        border-radius: 10px;
-        box-sizing: initial;
-        font-weight: bolder;
-        margin: 20px auto 10px;
-        padding: 1em;
-        width: 85%;
-        height: 10%
+    border-bottom: 1px solid grey;
+    padding: 0px 0px 8px 3px;
 }
-
-.verde{
-    background-color: #05cc41b2 !important;
-}
-

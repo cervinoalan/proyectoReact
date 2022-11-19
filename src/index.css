@@ -12,18 +12,18 @@ code {
     monospace;
 }
 
-a{
+a {
   text-decoration: none !important;
 }
 
-.colorNegro{
+.colorNegro {
   color: black;
 }
 
-.colorBlanco{
+.colorBlanco {
   color: #fff;
 }
 
-.fondoNegro{
+.fondoNegro {
   background-color: black;
 }
